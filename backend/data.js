@@ -1,9 +1,29 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+
+    users: [
+        {
+            name: 'Amulya',
+            email: 'admin09@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin:true
+        },
+
+        {
+            name: 'Mary',
+            email: 'user09@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin:false
+        }
+    
+
+    ],
 
     products: [
         
         {
-            _id: '1',
+            
             name: 'casual knee length frock',
             category: 'casuals',
             image: '/images/dress1.jpg',
@@ -17,8 +37,8 @@ const data = {
         },
 
         {
-            _id: '2',
-            name: 'casual knee length frock',
+            
+            name: 'casual summer wear frock',
             category: 'casuals',
             image: '/images/dress2.jpg',
             price: 900,
@@ -26,13 +46,13 @@ const data = {
             countInStock:20,
             rating:4.5,
             numOfReviews: 12,
-            description:'comfortable and elegant casual wear for party'
+            description:'comfortable wear for party'
             
         },
 
         {
-            _id: '3',
-            name: 'casual knee length frock',
+            
+            name: ' knee length frock',
             category: 'casuals',
             image: '/images/dress3.jpg',
             price: 750,
@@ -40,13 +60,13 @@ const data = {
             countInStock:12,
             rating:4.0,
             numOfReviews: 8,
-            description:'comfortable and elegant casual wear for party'
+            description:'elegant casual wear for party'
             
         },
 
         {
-            _id: '4',
-            name: 'casual knee length frock',
+            
+            name: 'casual wear frock',
             category: 'casuals',
             image: '/images/dress4.jpg',
             price: 1200,
@@ -59,21 +79,22 @@ const data = {
         },
 
         {
-            _id: '5',
-            name: 'casual knee length frock',
+            
+            name: 'Trendy knee length frock',
             category: 'casuals',
             image: '/images/dress5.jpg',
             price: 890,
             brand: 'Vanheusen',
+            countInStock:0,
             rating:3.9,
             numOfReviews: 5,
-            description:'comfortable and elegant casual wear for party'
+            description:'Trendy casual wear for party'
             
         },
 
         {
-            _id: '6',
-            name: 'casual knee length frock',
+            
+            name: 'Party wear frock',
             category: 'casuals',
             image: '/images/dress6.jpg',
             price: 650,
@@ -81,7 +102,7 @@ const data = {
             countInStock:5,
             rating:4,
             numOfReviews: 15,
-            description:'comfortable and elegant casual wear for party'
+            description:' casual wear for party'
             
         },
 

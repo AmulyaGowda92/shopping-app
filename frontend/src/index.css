@@ -24,8 +24,47 @@ a:hover {
   color: #ff8000;
 }
 
-li {
+ul {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #a4a4a4;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #f0c040;
+}
+
+button.block {
+  width: 100%;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.1rem solid #404040;
 }
 
 .grid-container {
@@ -62,12 +101,46 @@ footer {
   justify-content: space-between;
 }
 
+.row.top {
+  align-items: flex-start;
+}
+
 .row.center {
   justify-content: center;
 }
 
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 40rem;
+}
+
+.col-2.p-r {
+  padding-right: 1rem;
+}
+
+.min-30 {
+  min-width: 20rem;
+}
+
 img {
   border-radius: 0.6rem;
+}
+
+img.small {
+  max-width: 7rem;
+  width: 100%;
+}
+
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.large {
+  width: 100%;
 }
 
 h1 {
@@ -98,9 +171,13 @@ a.brand {
   font-family: 600;
 }
 
-img.medium {
-  max-width: 29rem;
-  width: 100%;
+.badge {
+  background-color: #f02020;
+  border-radius: 50%;
+  color: #ffffff;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.1rem;
 }
 
 .card {
@@ -120,6 +197,10 @@ img.medium {
   margin-bottom: 0.6rem;
 }
 
+.mb {
+  margin-bottom: 2rem;
+}
+
 .price {
   font-size: 2rem;
 }
@@ -129,4 +210,57 @@ img.medium {
 .rating span {
   color: #f0c040;
   margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #6e6969;
+  margin-left: 0.5rem;
+}
+
+/* Alert */
+
+.success {
+  color: #20a020;
+}
+
+.error {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid #404040;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+
+.productDetails__container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 796px) {
+  .card.card-body {
+    margin: 0 auto;
+  }
+
+  .col-2.p-r {
+    padding-right: 0;
+  }
+
+  .productDetails__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
